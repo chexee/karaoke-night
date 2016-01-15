@@ -1,0 +1,7 @@
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans-serif);
+  color: var(--white);
+}
+
+.caps { letter-spacing: 0 }
+.extra-bold { font-weight: 800 }
