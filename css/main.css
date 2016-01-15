@@ -2,17 +2,5 @@
 
 @charset 'UTF-8';
 
-/* 1. Vendors */
-@import 'vendor/*.css';
-
-/* 2. Configuration and helpers */
-@import 'utils/*.css';
-
-/* 3. Base stuff */
-@import 'base/*.css';
-
-/* 4. Layout-related sections */
-@import 'layout/*.css';
-
-/* 5. Components */
-@import 'components/*.css';
+@import 'main';
+@import 'basscss';
