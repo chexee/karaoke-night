@@ -2,5 +2,8 @@
 
 @charset 'UTF-8';
 
-@import 'main';
 @import 'basscss';
+
+/* Utilities */
+@import '_variables';
+@import '_typography';

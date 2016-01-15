@@ -8,9 +8,7 @@
  */
 
 // Load the ServiceWorker, the Cache polyfill, the manifest.json file and the .htaccess file
-import 'file?name=[name].[ext]!../manifest.json';
 import 'file?name=[name].[ext]!../.htaccess';
-
 
 // Import all the third party stuff
 import React from 'react';
@@ -30,11 +28,12 @@ openSansObserver.check().then(() => {
 });
 
 // Import the pages
-import HomePage from './components/pages/HomePage.react';
 import App from './components/App.react';
+import HomePage from './components/pages/HomePage.react';
 
 // Import the CSS file, which HtmlWebpackPlugin transfers to the build folder
 import '../css/main.css';
+import 'basscss';
 
 // Mostly boilerplate, except for the Routes. These are the pages you can go to,
 // which are all wrapped in the App component, which contains the navigation etc
