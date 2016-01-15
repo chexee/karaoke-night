@@ -13,9 +13,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Header>
-          KN
-        </Header>
+        <Header />
         { this.props.children }
       </div>
     );

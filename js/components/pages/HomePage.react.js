@@ -4,12 +4,18 @@
  */
 
 import React, { Component } from 'react';
+import SongSearch from '../SongSearch.react';
 
 export default class HomePage extends Component {
   render() {
     return (
-      <div>
-        <h1>Hello World!</h1>
+      <div className="center py3">
+        <div style={{marginBottom: '-5px'}} className="h5">Every night is</div>
+        <h1 className="mt0 extra-bold caps z2 relative" style={{letterSpacing: '-1px', marginBottom: '-20px'}}>
+          Karaoke Night
+        </h1>
+        <img src="img/mic-illustration.svg" className="mx-auto z1" />
+        <SongSearch />
       </div>
     );
   }

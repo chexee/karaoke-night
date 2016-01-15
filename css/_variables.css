@@ -1,5 +1,10 @@
 /*This file contains all application-wide CSS variables.*/
 :root {
+  /* Typography */
   --sans-serif: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+  /* Color */
   --purple: #51336A;
+  --purple-1: #352145;
+  --purple-2: #8755AF;
 }

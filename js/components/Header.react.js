@@ -11,9 +11,9 @@ import React, { Component } from 'react';
 export default class Header extends Component {
   render() {
     return (
-      <div className="bg-purple">
-        { this.props.children }
-        <a href="#">Log in</a>
+      <div className="bg-white center flex flex-center">
+          <h1 className="purple-2 extra-bold mx-auto mt1 mb1 inline-block" style={{letterSpacing: '-3px'}}>KN</h1>
+          <a href="#" className="inline-block right purple-2 caps small bold h6 mr2">Log in</a>
       </div>
     );
   }
