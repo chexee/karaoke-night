@@ -7,28 +7,14 @@
  */
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Logo from '../../img/logo.png';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <img className="logo" src={Logo} />
         { this.props.children }
+        klsdfjas;
       </div>
     );
   }
 }
-
-// REDUX STUFF
-
-// Which props do we want to inject, given the global state?
-function select(state) {
-  return {
-    data: state
-  };
-}
-
-// Wrap the component to inject dispatch and state into it
-export default connect(select)(App);

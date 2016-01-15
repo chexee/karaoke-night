@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React.js Boilerplate
 
 [![Dependency Status][dep-status-img]][dep-status-link] [![devDependency Status][dev-dep-status-img]][dev-dep-status-link] [![Build Status][ci-img]][ci] [![Join the chat at https://gitter.im/mxstbr/react-boilerplate](https://badges.gitter.im/mxstbr/react-boilerplate.svg)](https://gitter.im/mxstbr/react-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -164,3 +165,24 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for infos on how you can help!
 ## License
 
 This project is licensed under the MIT license, Copyright (c) 2016 Maximilian Stoiber. For more information see `LICENSE.md`.
+=======
+# karaoke-night
+For karaoke enthusiasts
+
+## Proposed stack
+- React
+- Firebase
+- WebPack?
+- Gulp? Grunt?
+- Some testing framework (intern? qunit? jasmine?)
+
+## Reading and resources
+- https://www.firebase.com/blog/2014-05-01-using-firebase-with-react.html
+- https://theintern.github.io/
+- https://coderwall.com/p/ntbixw/javascript-test-framework-comparison
+- https://facebook.github.io/flux/
+- https://musicbrainz.org/
+- https://developers.rovicorp.com/
+- https://developer.musixmatch.com/
+- http://developer.echonest.com/
+>>>>>>> a4f60a0d3a8b52f8d9f2357b9841b0c8a43cc0ba
