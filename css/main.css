@@ -3,9 +3,11 @@
 @charset 'UTF-8';
 
 @import 'basscss';
-/*@import 'puse-icons-feather';*/
 
 @import '_variables';
-
 @import '_colors';
+@import '_fonts';
 @import '_typography';
+
+@import '_forms';
+@import '_icons';

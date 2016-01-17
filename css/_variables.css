@@ -2,9 +2,24 @@
 :root {
   /* Typography */
   --sans-serif: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --icons-feather: 'feather', sans-serif;
+  --body-font-size: 15px;
+  --body-color: var(--purple-4);
 
   /* Color */
   --purple: #51336A;
-  --purple-1: #352145;
-  --purple-2: #8755AF;
+  --purple-1: #1D1226;
+  --purple-2: #352145;
+  --purple-3: #8755AF;
+  --purple-4: #9676AF;
+
+  /* Borders */
+  --border-width: 3px;
+
+  /* Links */
+  --link-color: white;
+
+  /* Forms */
+  --form-field-padding-x: 1.25rem;
+  --form-field-padding-y: 1.25rem;
 }

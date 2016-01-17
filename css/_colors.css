@@ -1,2 +1,7 @@
 .purple-2 { color: var(--purple-2) }
-.bg-purple-1 { background-color: var(--purple-1) }
+.purple-3 { color: var(--purple-3) }
+.purple-4 { color: var(--purple-4) }
+
+.bg-purple-2 { background-color: var(--purple-2) }
+
+.border-purple-3 { border-color: var(--purple-3) }

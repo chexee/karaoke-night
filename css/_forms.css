@@ -1,0 +1,23 @@
+.field {
+  font-size: var(--body-font-size);
+  border-width: 1px;
+}
+.field:focus {
+  border-color: var(--purple-1);
+}
+
+::-webkit-input-placeholder {color:var(--purple-4);}
+::-moz-placeholder          {color:var(--purple-4);} /* Firefox 19+ */
+:-moz-placeholder           {color:var(--purple-4);} /* Firefox 18- */
+:-ms-input-placeholder      {color:var(--purple-4);}
+
+.field-search:before {
+  content: '\e036';
+  font-family: var(--icons-feather);
+  position: absolute;
+    top: 9px;
+    left: 15px;
+  opacity: 0.2;
+}
+
+.field-search .field { padding-left: 2.5rem; }
