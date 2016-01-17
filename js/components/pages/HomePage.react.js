@@ -16,7 +16,7 @@ export default class HomePage extends Component {
         <h1 className="mt0 extra-bold caps z2 relative white" style={{letterSpacing: '-1px', marginBottom: '-20px'}}>
           Karaoke Night
         </h1>
-        <img src={'img/' + micIllo} className="mx-auto z1" />
+        <img src={micIllo} className="mx-auto z1" />
         <SongSearch />
         <div className="center py2">
           or <a href="#">browse songbooks</a>
