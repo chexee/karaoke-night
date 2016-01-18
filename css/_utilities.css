@@ -3,4 +3,6 @@
 .border-muted { border-color: var(--white-muted-10) }
 
 .mrn2 { margin-right: -2rem }
-.top-shadow { box-shadow: 0 -5px 5px var(--black-muted-10); }
+.top-shadow { box-shadow: 0 -3px 5px var(--black-muted-10); }
+
+.rounded {border-radius: 25px}
