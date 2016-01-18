@@ -13,7 +13,7 @@ export default class Songbooks extends Component {
     return (
       <div>
 
-        <div className="fixed left-0 right-0 top-0 mt4 z1 py2 px2 bg-purple">
+        <div className="fixed left-0 right-0 top-0 mt4 z1 py1 px2 bg-purple">
           <div className="mt1"><SongSearch /></div>
           <div className="py1 px0 mt1">
             <div className="h6 white caps">Browse by</div>
@@ -35,7 +35,7 @@ export default class Songbooks extends Component {
           <hr className="border-bottom border-muted mxn2 m0" />
         </div>
 
-        <div className="p2 overflow-scroll mb4" style={{marginTop: '200px'}}>
+        <div className="px2 py3 overflow-scroll mb4" style={{marginTop: '195px'}}>
 
           <div className="mt0">
             <div className="h6 caps bold">#</div>
