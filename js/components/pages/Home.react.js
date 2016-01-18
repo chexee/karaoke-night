@@ -3,10 +3,10 @@
  * This is the first thing users see of our App
  */
 
-import React, { Component } from 'react';
-import NavBar from '../NavBar.react';
-import SongSearch from '../SongSearch.react';
-import micIllo from 'file?name=[name].[ext]!../../../img/mic-illustration.svg';
+import React, { Component } from 'react'
+import NavBar from '../NavBar.react'
+import SongSearch from '../SongSearch.react'
+import micIllo from 'file?name=[name].[ext]!../../../img/mic-illustration.svg'
 
 export default class HomePage extends Component {
   render() {
@@ -19,8 +19,8 @@ export default class HomePage extends Component {
         <img src={ '/img/' + micIllo} className="mx-auto z1" />
         <SongSearch />
         <div className="center py2">or <a href="#">browse songbooks</a></div>
-        <NavBar />
+        <NavBar activeTab="songs"/>
       </div>
-    );
+    )
   }
 }

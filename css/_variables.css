@@ -13,8 +13,11 @@
   --purple-3: #8755AF;
   --purple-4: #9676AF;
 
+  --white-muted-10: rgba(255, 255, 255, 0.1);
+  --black-muted-10:  rgba(0, 0, 0, 0.1);
+
   /* Borders */
-  --border-width: 3px;
+  --border-width-3: 3px;
 
   /* Links */
   --link-color: white;

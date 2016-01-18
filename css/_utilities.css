@@ -1,0 +1,6 @@
+.border-3 { border-width:var(--border-width-3) }
+.border-purple-3 { border-color: var(--purple-3) }
+.border-muted { border-color: var(--white-muted-10) }
+
+.mrn2 { margin-right: -2rem }
+.top-shadow { box-shadow: 0 -5px 5px var(--black-muted-10); }

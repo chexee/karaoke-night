@@ -29,7 +29,8 @@ openSansObserver.check().then(() => {
 
 // Import the pages
 import App from './components/App.react';
-import HomePage from './components/pages/HomePage.react';
+import Home from './components/pages/Home.react';
+import Songbooks from './components/pages/Songbooks.react';
 
 // Import the CSS file, which HtmlWebpackPlugin transfers to the build folder
 import '../css/main.css';
@@ -40,7 +41,9 @@ import 'basscss';
 ReactDOM.render(
   <Router history={createHistory()}>
     <Route component={App}>
-      <Route path="/" component={HomePage} />
+      <Route path="/" component={Home} />
+      <Route path="/songbooks" component={Songbooks} />
+
     </Route>
   </Router>,
   document.getElementById('app')

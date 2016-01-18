@@ -6,8 +6,8 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import React, { Component } from 'react';
-import Header from './Header.react';
+import React, { Component } from 'react'
+import Header from './Header.react'
 
 export default class App extends Component {
   render() {
@@ -16,6 +16,6 @@ export default class App extends Component {
         <Header />
         { this.props.children }
       </div>
-    );
+    )
   }
 }
