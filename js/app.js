@@ -35,6 +35,7 @@ import Songbooks from './components/pages/Songbooks.react'
 import Songs from './components/pages/Songs.react'
 
 // Import the CSS file, which HtmlWebpackPlugin transfers to the build folder
+import 'puse-icons-feather/feather.css'
 import 'basscss'
 import '../css/main.css'
 
