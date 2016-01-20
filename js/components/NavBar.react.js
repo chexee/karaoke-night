@@ -19,7 +19,7 @@ export default class NavBar extends Component {
   }
   render() {
     return (
-      <div className="mt2 bottom-0 col-12 bg-purple-2 center fixed top-shadow">
+      <div className="mt2 bottom-0 col-12 bg-purple-2 center fixed top-shadow z3">
         <div className="clearfix" id="nav-tabs">
           <Link data-nav-tab="songs" to="/songs" className="col col-4 py1 border-top border-3 border-purple-3">
             <div><div className="icon-disc icon-20 white"></div></div>

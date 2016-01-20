@@ -6,13 +6,24 @@
 import React, { Component } from 'react'
 import NavBar from '../NavBar.react'
 import SongSearch from '../SongSearch.react'
+import SongsByArtist from './SongsByArtist.react'
+import Firebase from 'firebase'
 
+export default class Songs extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {karaokeData: null}
+  }
+  componentWillMount() {
+    // Init Firebase data
+    const karaokeData = new Firebase('https://karaokenight.firebaseio.com/')
+    karaokeData.on('value', (snapshot) => this.setState({ karaokeData: snapshot.val() }))
+  }
 
-export default class Songbooks extends Component {
   render() {
+    if (!this.state.karaokeData) { return <div></div> }
     return (
       <div>
-
         <div className="fixed left-0 right-0 top-0 mt4 z1 py1 px2 bg-purple">
           <div className="mt1"><SongSearch /></div>
           <div className="py1 px0 mt1">
@@ -34,55 +45,9 @@ export default class Songbooks extends Component {
           </div>
           <hr className="border-bottom border-muted mxn2 m0" />
         </div>
-
-        <div className="px2 py3 overflow-scroll mb4" style={{marginTop: '195px'}}>
-
-          <div className="mt0">
-            <div className="h6 caps bold">#</div>
-            <div className="border-bottom border-muted py2 mrn2 relative">
-              <div className="white h4">? and the Mysterians</div>
-              <span className="white absolute right-0 h2 mr3" style={{top: '10px'}}>
-                <span className="inline-block h6 bg-teal rounded mr2 relative" style={{padding: '3px 12px', top: '-3px'}}>10 songs</span>
-                ›
-              </span>
-            </div>
-            <div className="border-bottom border-muted py2 mrn2 relative">
-              <div className="white h4">10,000 Maniacs</div>
-              <span className="white absolute right-0 h2 mr3" style={{top: '10px'}}>
-                <span className="inline-block h6 bg-teal rounded mr2 relative" style={{padding: '3px 12px', top: '-3px'}}>10 songs</span>
-                ›
-              </span>
-            </div>
-          </div>
-
-          <div className="mt3">
-            <div className="h6 caps bold">A</div>
-            <div className="border-bottom border-muted py2 mrn2 relative">
-              <div className="white h4">ABBA</div>
-              <span className="white absolute right-0 h2 mr3" style={{top: '10px'}}>
-                <span className="inline-block h6 bg-teal rounded mr2 relative" style={{padding: '3px 12px', top: '-3px'}}>10 songs</span>
-                ›
-              </span>
-            </div>
-            <div className="border-bottom border-muted py2 mrn2 relative">
-              <div className="white h4">Paula Abdul</div>
-              <span className="white absolute right-0 h2 mr3" style={{top: '10px'}}>
-                <span className="inline-block h6 bg-teal rounded mr2 relative" style={{padding: '3px 12px', top: '-3px'}}>10 songs</span>
-                ›
-              </span>
-            </div>
-            <div className="border-bottom border-muted py2 mrn2 relative">
-              <div className="white h4">AC/DC</div>
-              <span className="white absolute right-0 h2 mr3" style={{top: '10px'}}>
-                <span className="inline-block h6 bg-teal rounded mr2 relative" style={{padding: '3px 12px', top: '-3px'}}>10 songs</span>
-                ›
-              </span>
-            </div>
-
-          </div>
-
+        <div className="p2 overflow-scroll" style={{marginBottom: '60px', marginTop: '150px'}}>
+          <SongsByArtist artists={this.state.karaokeData.artists} />
         </div>
-
         <NavBar activeTab="songs"/>
       </div>
     )

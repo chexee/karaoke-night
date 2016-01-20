@@ -6,3 +6,8 @@
 .top-shadow { box-shadow: 0 -3px 5px var(--black-muted-10); }
 
 .rounded {border-radius: 25px}
+
+.overflow-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
