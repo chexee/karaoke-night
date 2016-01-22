@@ -33,6 +33,7 @@ import Home from './components/pages/Home.react'
 import Favorites from './components/pages/Favorites.react'
 import Songbooks from './components/pages/Songbooks.react'
 import Songs from './components/pages/Songs.react'
+import Artist from './components/pages/Artist.react'
 
 // Import the CSS file, which HtmlWebpackPlugin transfers to the build folder
 import 'puse-icons-feather/feather.css'
@@ -47,8 +48,8 @@ ReactDOM.render(
       <Route path="/" component={Home} />
       <Route path="/songbooks" component={Songbooks} />
       <Route path="/songs" component={Songs} />
+      <Route path="/songs/:artistId" component={Artist}/>
       <Route path="/favorites" component={Favorites} />
-
     </Route>
   </Router>,
   document.getElementById('app')

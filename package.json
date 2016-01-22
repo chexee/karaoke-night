@@ -44,6 +44,7 @@
     "puse-icons-feather": "^1.1.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
+    "react-infinite": "^0.8.0",
     "react-redux": "^4.0.0",
     "react-router": "^1.0.3",
     "react-transform-hmr": "^1.0.1",
