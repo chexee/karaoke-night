@@ -15,23 +15,23 @@ export default class Artist extends Component {
   }
 
   componentWillMount() {
-    this.getArtists()
+    this.getArtist()
   }
   componentDidMount() {
     this.getSongsByArtist()
   }
 
-  getArtists() {
+  getArtist() {
     // Init Firebase data
-    const artists = new Firebase('https://karaokenight.firebaseio.com/artists/' + this.props.params.artistId)
-    artists.on('value', (snapshot) => this.setState({ artists: snapshot.val() }) )
+    const artist = new Firebase('https://karaokenight.firebaseio.com/artists/' + this.props.params.artistId)
+    artist.on('value', (snapshot) => this.setState({ artist: snapshot.val() }) )
   }
 
   getSongsByArtist() {
-    if (!this.state.artists) { return }
+    if (!this.state.artist) { return }
     const getSongs = new Firebase('https://karaokenight.firebaseio.com/songs/')
     const songTitles = []
-    this.state.artists.songs.map( songID => {
+    this.state.artist.songs.map( songID => {
       getSongs.orderByKey().equalTo(songID).on('value', (snapshot) => {
         const song = snapshot.val()
         songTitles.push(song[Object.keys(song)].title)
@@ -47,7 +47,6 @@ export default class Artist extends Component {
           <div className="border-bottom border-muted py2 mrn2 relative" key={song}>
             <div className="white h4" style={{marginRight: '130px'}}>{song}</div>
             <span className="white absolute right-0 h2 mr3 px1" style={{top: '10px'}}>
-              <span className="inline-block h6 bg-teal rounded mr2 relative" style={{padding: '3px 12px', top: '-3px'}}>10 events</span>
               ›
             </span>
           </div>
@@ -60,7 +59,7 @@ export default class Artist extends Component {
     return (
       <div>
         <div className="p2 overflow-scroll mt4 mb4">
-          <div className="h6 caps white">Songbooks</div>
+          <div className="h6 caps white">Songs by {this.state.artist.label}</div>
           {this.renderSongItems()}
         </div>
         <NavBar activeTab="songs" />

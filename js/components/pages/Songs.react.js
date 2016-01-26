@@ -12,7 +12,7 @@ import Firebase from 'firebase'
 export default class Songs extends Component {
   constructor(props) {
     super(props)
-    this.state = {karaokeData: null}
+    this.state = { karaokeData: null }
   }
   componentWillMount() {
     // Init Firebase data
