@@ -26,7 +26,7 @@ export default class SongsByArtist extends Component {
   render() {
     return (
       <div style={{marginRight: '-15px'}}>
-        <Infinite containerHeight={430} elementHeight={56} infiniteLoadBeginEdgeOffset={200}>{this.renderArtistItems()}</Infinite>
+        <Infinite containerHeight={430} elementHeight={56} infiniteLoadBeginEdgeOffset={200} preloadBatchSize={Infinite.containerHeightScaleFactor(2)}>{this.renderArtistItems()}</Infinite>
       </div>
     )
   }
