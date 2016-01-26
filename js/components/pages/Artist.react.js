@@ -8,49 +8,52 @@ import NavBar from '../NavBar.react'
 
 
 export default class Artist extends Component {
+
   constructor(props) {
     super(props)
     this.state = {songs: []}
   }
 
-
   componentWillMount() {
-    this.setArtistData()
+    this.getArtists()
   }
   componentDidMount() {
-    this.setSongData()
+    this.getSongsByArtist()
   }
 
-  setArtistData() {
+  getArtists() {
     // Init Firebase data
-    const getArtistData = new Firebase('https://karaokenight.firebaseio.com/artists/' + this.props.params.artistId)
-    getArtistData.on('value', (snapshot) => this.setState({ artistData: snapshot.val() }) )
+    const artists = new Firebase('https://karaokenight.firebaseio.com/artists/' + this.props.params.artistId)
+    artists.on('value', (snapshot) => this.setState({ artists: snapshot.val() }) )
   }
 
-  setSongData() {
-    if (!this.state.artistData) { return }
+  getSongsByArtist() {
+    if (!this.state.artists) { return }
     const getSongs = new Firebase('https://karaokenight.firebaseio.com/songs/')
-    this.state.artistData.songs.map( songID => {
+    const songTitles = []
+    this.state.artists.songs.map( songID => {
       getSongs.orderByKey().equalTo(songID).on('value', (snapshot) => {
-        const songObj = snapshot.val()
-        this.state.songs.push(songObj[Object.keys(songObj)].title)
+        const song = snapshot.val()
+        songTitles.push(song[Object.keys(song)].title)
       })
     })
+    this.setState({ songs: songTitles })
   }
 
-
   renderSongItems() {
-    return this.state.songs.map( song => {
-      return (
-        <div className="border-bottom border-muted py2 mrn2 relative" key={song}>
-          <div className="white h4" style={{marginRight: '130px'}}>{song}</div>
-          <span className="white absolute right-0 h2 mr3 px1" style={{top: '10px'}}>
-            <span className="inline-block h6 bg-teal rounded mr2 relative" style={{padding: '3px 12px', top: '-3px'}}>10 events</span>
-            ›
-          </span>
-        </div>
-      )
-    })
+    if (this.state.songs) {
+      return this.state.songs.map( song => {
+        return (
+          <div className="border-bottom border-muted py2 mrn2 relative" key={song}>
+            <div className="white h4" style={{marginRight: '130px'}}>{song}</div>
+            <span className="white absolute right-0 h2 mr3 px1" style={{top: '10px'}}>
+              <span className="inline-block h6 bg-teal rounded mr2 relative" style={{padding: '3px 12px', top: '-3px'}}>10 events</span>
+              ›
+            </span>
+          </div>
+        )
+      })
+    }
   }
 
   render() {
