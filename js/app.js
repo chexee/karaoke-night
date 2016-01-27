@@ -29,7 +29,6 @@ openSansObserver.check().then(() => {
 
 // Import the pages
 import App from './components/App.react'
-import Home from './components/pages/Home.react'
 import Favorites from './components/pages/Favorites.react'
 import Songbooks from './components/pages/Songbooks.react'
 import Songs from './components/pages/Songs.react'
@@ -45,7 +44,7 @@ import '../css/main.css'
 ReactDOM.render(
   <Router history={createHistory()}>
     <Route component={App}>
-      <Route path="/" component={Home} />
+      <Route path="/" component={Songs} />
       <Route path="/songbooks" component={Songbooks} />
       <Route path="/songs" component={Songs} />
       <Route path="/songs/:artistId" component={Artist}/>

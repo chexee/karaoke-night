@@ -24,7 +24,7 @@ export default class Songs extends Component {
     if (!this.state.karaokeData) { return <div></div> }
     return (
       <div>
-        <div className="fixed left-0 right-0 top-0 z1 px2 bg-purple" style={{marginTop: '55px'}}>
+        <div className="fixed left-0 right-0 top-0 z1 px2 bg-purple" style={{marginTop: '35px'}}>
           <div className="mt1 py1"><SongSearch /></div>
           <div className="px0 mt1">
             <div className="h6 white caps">Browse by</div>
@@ -45,7 +45,7 @@ export default class Songs extends Component {
           </div>
           <hr className="border-bottom border-muted mxn2 mb0" />
         </div>
-        <div className="p2 overflow-scroll" style={{marginBottom: '60px', marginTop: '175px'}}>
+        <div className="p2 overflow-scroll" style={{marginBottom: '60px', marginTop: '155px'}}>
           <SongsByArtist artists={this.state.karaokeData.artists} />
         </div>
         <NavBar activeTab="songs"/>
